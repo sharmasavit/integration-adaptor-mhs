@@ -31,7 +31,6 @@ MHS_OUTBOUND_VALIDATE_CERTIFICATE: "True" #should be False for OpenTest
 #User-specific env variables
 MHS_SECRET_PARTY_KEY: AXXXXX-XXXXXXX #put your party key here (OpenTest)
 MHS_SECRET_CLIENT_CERT: |
-  -----BEGIN CERTIFICATE-----
 #put your endpoint certificate here (OpenTest) - remember to put two spaces of indentation for the whole length of certificate (see line above)
   -----END CERTIFICATE-----
 MHS_SECRET_CLIENT_KEY: |
