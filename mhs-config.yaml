@@ -22,7 +22,6 @@ MHS_STATE_TABLE_NAME: "mhs_state"
 MHS_SYNC_ASYNC_STATE_TABLE_NAME: "sync_async_state"
 MHS_PERSISTENCE_ADAPTOR: "dynamodb"
 MHS_DB_ENDPOINT_URL: "http://dynamodb:8000"
-#MHS_DB_ENDPOINT_URL: "http://host.docker.internal:8000"
 
 ## AWS credentials
 #AWS_ACCESS_KEY_ID: "test"
