@@ -225,7 +225,7 @@ services:
   outbound:
     image: nhsdev/nia-mhs-outbound:1.3.2
     ports:
-      - "80"
+    - "32768:80"
     environment:
       - MHS_LOG_LEVEL=NOTSET
       - MHS_SECRET_PARTY_KEY=VND3J-823806
