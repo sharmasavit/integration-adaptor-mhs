@@ -457,6 +457,7 @@ services:
       - MHS_SDS_REDIS_CACHE_HOST=redis
       - MHS_SDS_REDIS_DISABLE_TLS=True
   dynamodb:
+    container_name: host.docker.internal
     image: nhsdev/nia-dynamodb-local:latest
     ports:
       - "8000:8000"
