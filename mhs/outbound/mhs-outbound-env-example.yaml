@@ -10,14 +10,14 @@ MHS_INBOUND_QUEUE_NAME: inbound
 #db configuration
 MHS_STATE_TABLE_NAME: mhs_state
 MHS_SYNC_ASYNC_STATE_TABLE_NAME: sync_async_state
-MHS_PERSISTENCE_ADAPTOR: # one of: dynamodb(default) | mongodb
+MHS_PERSISTENCE_ADAPTOR: dynamodb # one of: dynamodb(default) | mongodb
 #then set appropriate db url
-MHS_DB_ENDPOINT_URL: # one of: http://localhost:8000 | mongodb://localhost:27017 for local docker development
+MHS_DB_ENDPOINT_URL: http://host.docker.internal:8000 # one of: http://localhost:8000 | mongodb://localhost:27017 for local docker development
 
 # following 3 are mandatory for SDS API use instead of spine-route-lookup component
 MHS_OUTBOUND_ROUTING_LOOKUP_METHOD: SDS_API # one of SPINE_ROUTE_LOOKUP(default if empty) or SDS_API
-MHS_SDS_API_URL: # URL to the SDS API (eg. INT - https://internal-dev.api.service.nhs.uk/spine-directory/FHIR/R4)
-MHS_SDS_API_KEY: # api key used to authenticate with the SDS API
+MHS_SDS_API_URL: https://int.api.service.nhs.uk/spine-directory/FHIR/R4 # URL to the SDS API (eg. INT - https://internal-dev.api.service.nhs.uk/spine-directory/FHIR/R4)
+MHS_SDS_API_KEY: BGH3LMDtnadxNtL6YetqurpZDnE4wjtz # api key used to authenticate with the SDS API
 
 AWS_ACCESS_KEY_ID: test
 AWS_SECRET_ACCESS_KEY: test
