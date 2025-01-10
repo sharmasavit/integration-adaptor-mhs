@@ -121,7 +121,7 @@ venv.bak/
 **/*.cert
 **/*.crt
 **/*.key
-**/*.pem
+#**/*.pem
 **/certs/party_key.txt
 **/certs/asid.txt
 
