@@ -40,6 +40,9 @@ class CommonHttps(object):
         if logger.isEnabledFor(logging.DEBUG):
             logger.debug("Request {headers}", fparams={"headers": headers})
             logger.debug("Request {body}", fparams={"body": body})
+            logger.debug("client_key", client_key)
+            logger.debug("client_cert", client_cert)
+            logger.debug("ca_certs", ca_certs)
 
         if not validate_cert:
             logger.warning("Server certificate validation has been disabled.")
@@ -47,11 +50,7 @@ class CommonHttps(object):
         if ca_certs is None:
             ca_certs = ssl.get_default_verify_paths().cafile
 
-            logger.debug("client_key", client_key)
 
-            logger.debug("client_cert", client_cert)
-
-            logger.debug("ca_certs", ca_certs)
 
         response = await httpclient.AsyncHTTPClient().fetch(url,
                                                             raise_error=raise_error_response,
