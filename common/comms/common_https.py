@@ -47,6 +47,12 @@ class CommonHttps(object):
         if ca_certs is None:
             ca_certs = ssl.get_default_verify_paths().cafile
 
+            logger.debug("client_key", client_key)
+
+            logger.debug("client_cert", client_cert)
+
+            logger.debug("ca_certs", ca_certs)
+
         response = await httpclient.AsyncHTTPClient().fetch(url,
                                                             raise_error=raise_error_response,
                                                             method=method,
